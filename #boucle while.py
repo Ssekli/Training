@@ -1,5 +1,5 @@
 #boucle et fonctions
-# bug de type dans fonction print
+
 
 def demander_age() :
     age_int = 0
@@ -14,15 +14,16 @@ def demander_age() :
 
 
 def demander_nom() :
-    reponse_nom = ""
-    while reponse_nom == "" :
-        reponse_nom = input("Quel est votre nom ?")
-    return
+    nom = ""
+    while nom == "" :
+        nom = input("Quel est votre nom ?")
+    return nom
 
 
 nom = demander_nom()
 
 age = demander_age()
 
-print("vous vous appelez" + nom + ",vous avez" + str(age) + "ans")
-print("L'an prochain vous aurez" + str(age+1) + "ans")
+
+print("vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
+print("L'an prochain vous aurez " + str(age+1) + " ans.")

@@ -1,4 +1,4 @@
-#boucle et fonctions
+#Fiche personne
 
 def demander_nom() :
     nom = ""
@@ -17,7 +17,18 @@ def demander_age(nom) :
             print("erreur entrez un nombre")
     return age_int
 
-def afficher_information_personne(nom, age) :
+def demander_taille(nom) :
+    taille_float = 0.0
+    while  taille_float == 0.0 :
+        taille_str = input(nom + "Quel est votre taille ?")
+        try:
+            taille_float = float(taille_str)
+        except ValueError:
+            print("Entrez un nombre au format 0.00")
+    return taille_float
+        
+
+def afficher_information_personne(nom, age, taille) :
     print()
     print("vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
     print("L'an prochain vous aurez " + str(age+1) + " ans.")
@@ -36,18 +47,25 @@ def afficher_information_personne(nom, age) :
         print("Vous êtes bébé")
     elif age < 10:
         print("Vous êtes un enfant")
- 
     else:
         print ("Vous êtes mineur")
+   
+
+    print("Votre taille est " + str(taille) + "m")
 
 
-nom1 = demander_nom()
-nom2 = demander_nom()
+#nom1 = demander_nom()
+#nom2 = demander_nom()
 
-age1 = demander_age(nom1)
-age2 = demander_age(nom2)
+#age1 = demander_age(nom1)
+#age2 = demander_age(nom2)
 
-afficher_information_personne(nom1, age1)
-afficher_information_personne(nom2, age2)
+#afficher_information_personne(nom1, age1)
+#afficher_information_personne(nom2, age2)
 
-
+NB_DE_PERSONNES = 3
+for i in range(1, NB_DE_PERSONNES):
+    nom = "personne" + str(i+1)
+    age = demander_age(nom)
+    taille = demander_taille(nom)
+    afficher_information_personne(nom, age, taille)

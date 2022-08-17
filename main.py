@@ -1,5 +1,7 @@
 #Fiche personne
 
+
+
 def demander_nom() :
     nom = ""
     while nom == "" :
@@ -20,7 +22,7 @@ def demander_age(nom) :
 def demander_taille(nom) :
     taille_float = 0.0
     while  taille_float == 0.0 :
-        taille_str = input(nom + "Quel est votre taille ?")
+        taille_str = input(nom + " Quel est votre taille ?")
         try:
             taille_float = float(taille_str)
         except ValueError:
@@ -30,7 +32,7 @@ def demander_taille(nom) :
 
 def afficher_information_personne(nom, age, taille) :
     print()
-    print("vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
+    print("vous vous appelez " + nom + ", vous avez " + str(age) + " ans.")
     print("L'an prochain vous aurez " + str(age+1) + " ans.")
     print()
     if age > 60:
@@ -51,11 +53,11 @@ def afficher_information_personne(nom, age, taille) :
         print ("Vous êtes mineur")
    
 
-    print("Votre taille est " + str(taille) + "m")
+    print("Votre taille est " + str(taille) + " m")
 
 
-nom1 = demander_nom()
-nom2 = demander_nom()
+#nom1 = demander_nom()
+#nom2 = demander_nom()
 
 #age1 = demander_age(nom1)
 #age2 = demander_age(nom2)
@@ -65,7 +67,7 @@ nom2 = demander_nom()
 
 NB_DE_PERSONNES = 3
 for i in range(0, NB_DE_PERSONNES):
-    nom = "personne" + str(i+1)
+    nom = demander_nom() + str(i+1)
     age = demander_age(nom)
     taille = demander_taille(nom)
     afficher_information_personne(nom, age, taille)

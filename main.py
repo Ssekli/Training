@@ -10,7 +10,7 @@ def demander_nom() :
 def demander_age(nom) :
     age_int = 0
     while age_int == 0 :
-        age_str = input(nom + "Quel est votre age ?")
+        age_str = input(nom + " Quel est votre age ?")
         try:
             age_int = int(age_str)
         except ValueError:
@@ -54,8 +54,8 @@ def afficher_information_personne(nom, age, taille) :
     print("Votre taille est " + str(taille) + "m")
 
 
-#nom1 = demander_nom()
-#nom2 = demander_nom()
+nom1 = demander_nom()
+nom2 = demander_nom()
 
 #age1 = demander_age(nom1)
 #age2 = demander_age(nom2)
@@ -64,7 +64,7 @@ def afficher_information_personne(nom, age, taille) :
 #afficher_information_personne(nom2, age2)
 
 NB_DE_PERSONNES = 3
-for i in range(1, NB_DE_PERSONNES):
+for i in range(0, NB_DE_PERSONNES):
     nom = "personne" + str(i+1)
     age = demander_age(nom)
     taille = demander_taille(nom)

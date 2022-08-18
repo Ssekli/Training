@@ -67,7 +67,7 @@ def afficher_information_personne(nom, age, taille) :
 
 NB_DE_PERSONNES = 3
 for i in range(0, NB_DE_PERSONNES):
-    nom = demander_nom() + str(i+1)
+    nom = demander_nom()
     age = demander_age(nom)
     taille = demander_taille(nom)
     afficher_information_personne(nom, age, taille)

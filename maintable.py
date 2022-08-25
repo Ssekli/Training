@@ -1,5 +1,5 @@
 # création de table de multiplication
-def table(n, min, max):
+def table(n, min=1, max=10):
     if min>max :
         print("erreur")
         return

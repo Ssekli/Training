@@ -4,9 +4,9 @@ def table(n, min=1, max=10):
         print("erreur")
         return
 
-    else :
-        for i in range(min, max+1) :
-            calcul = n * i
-            print(f"{n}x{i}={calcul}")
+
+    for i in range(min, max+1) :
+        calcul = n * i
+        print(f"{n}x{i}={calcul}")
 
 table(5, 1, 12)

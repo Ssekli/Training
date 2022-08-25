@@ -4,7 +4,6 @@ def table(n, min=1, max=10):
         print("erreur")
         return
 
-
     for i in range(min, max+1) :
         calcul = n * i
         print(f"{n}x{i}={calcul}")

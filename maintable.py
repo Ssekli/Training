@@ -7,6 +7,6 @@ def table(n, min, max):
     else :
         for i in range(min, max+1) :
             calcul = n * i
-            print(f"{n}*{i}={calcul}")
+            print(f"{n}x{i}={calcul}")
 
 table(5, 1, 12)
